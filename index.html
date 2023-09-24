@@ -14,29 +14,37 @@
 </head>
 <body>
     hello
-    <script>
+    <!-- // way to get through ip address -->
+    <!-- <script>
     // var city,pincode,state,country,region,zip
-fetch('http://ip-api.com/json/', {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',
-  },
-})
-  .then(response => response.json())
-  .then(data => {
-    // Handle the data in the response
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+// fetch('http://ip-api.com/json/', {
+//   method: 'GET',
+//   headers: {
+//     'Authorization': 'Bearer YOUR_API_KEY',
+//   },
+// })
+//   .then(response => response.json())
+//   .then(data => {
+//     // Handle the data in the response
+//     console.log(data);
+//   })
+//   .catch(error => {
+//     console.error('Error:', error);
+//   });
 
   // Check if geolocation is available in the browser
+  // i
 
 
-  // other way just use style provided above also 
-    </script>
+
+  // other way just use windows code provided above also 
+
+    </script> -->
       <div id="map"></div>
+      <h4 id = "lati">
+         </h4>
+         
+     
     <script>
         let  latitude,longitude;
         
@@ -47,6 +55,12 @@ fetch('http://ip-api.com/json/', {
 
         console.log(`Latitude: ${latitude}`);
         console.log(`Longitude: ${longitude}`);
+        const a1 = document.getElementById("lati");
+      
+
+// Change the innerHTML
+a1.innerText=`latitude & longitude :${latitude} , ${longitude}`;
+
     // Display latitude and longitude
     const map = L.map('map').setView([latitude, longitude], 11); // Use your latitude and longitude here
     
